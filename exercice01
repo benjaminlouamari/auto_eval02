@@ -1,0 +1,33 @@
+package metho_package;
+
+import java.util.Scanner;
+
+public class Exercice {
+
+	public static void main(String[] args) {
+		
+		Scanner clavier = new Scanner(System.in);
+		
+		System.out.println("Entrez la note de français (sur 20): ");
+		int fr = clavier.nextInt();
+		
+		System.out.println("Entrez la note de Mathématique (sur 20): ");
+		int math = clavier.nextInt();
+		
+		clavier.close();
+		
+		if(fr >= 10 && math >= 10) {
+			System.out.println("Réussite.");
+		}
+		else if(fr < 10 && math < 10) {
+			System.out.println("Echec total.");
+		}
+		else if(fr < 10 && math >= 10) {
+			System.out.println("Examen de passage en français.");
+		}
+		else if(fr >= 10 && math < 10) {
+			System.out.println("Examen de passage en Mathématique.");
+		}
+	}
+
+}
