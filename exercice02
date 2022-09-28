@@ -1,0 +1,29 @@
+package metho_package;
+
+import java.util.Scanner;
+
+public class Exercice {
+
+	public static void main(String[] args) {
+		
+		Scanner clavier = new Scanner(System.in);
+		
+		System.out.println("Entrez le premier nombre: ");
+		int NUM_1 = clavier.nextInt();
+		
+		System.out.println("Entrez le deuxième nombre: ");
+		int NUM_2 = clavier.nextInt();
+		
+		clavier.close();
+		
+		if((NUM_1 + NUM_2) % 2 == 0) {
+			// Moyenne Arithmétique
+			System.out.println("Moyenne arithmétique = " + (NUM_1 + NUM_2) / 2 );
+		}
+		else {
+			// Moyenne Géométrique
+			System.out.println("Moyenne géométrique = " + Math.sqrt(NUM_1 * NUM_2) );
+		}
+	}
+
+}
